@@ -14,6 +14,17 @@ Ensure you have the following installed on your system:
 - [Docker](https://www.docker.com/products/docker-desktop/)
 - [Docker Compose](https://docs.docker.com/compose/install/)
 
+## 🔌 Port Usage
+
+To avoid conflicts with existing services on your machine, please ensure the following ports are available:
+
+| Service | Host Port | Internal Port | Description |
+| :--- | :--- | :--- | :--- |
+| **Frontend** | `5173` | `80` | Web Interface (Nginx) |
+| **Backend** | `3001` | `3000` | API Server (ElysiaJS) |
+| **PostgreSQL** | `5433` | `5432` | Database Storage |
+| **Redis** | `6380` | `6379` | Caching & Rate Limit |
+
 ## ⚡ Quick Start (Docker Setup)
 
 Follow these steps to run the entire application from scratch:
