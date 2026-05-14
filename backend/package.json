@@ -1,0 +1,28 @@
+{
+  "name": "backend",
+  "module": "src/app.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/pg": "^8.20.0",
+    "@vitest/coverage-v8": "4.1.6",
+    "prisma": "^7.8.0",
+    "vitest": "^4.1.6"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@elysiajs/cors": "^1.4.2",
+    "@elysiajs/server-timing": "^1.4.1",
+    "@elysiajs/swagger": "^1.3.1",
+    "@prisma/adapter-pg": "^7.8.0",
+    "@prisma/client": "^7.8.0",
+    "elysia": "^1.4.28",
+    "elysia-rate-limit": "^4.6.2",
+    "ioredis": "^5.10.1",
+    "pg": "^8.20.0",
+    "redis": "^5.12.1"
+  }
+}
