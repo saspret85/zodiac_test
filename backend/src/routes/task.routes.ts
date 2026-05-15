@@ -1,8 +1,8 @@
 import { Elysia, t } from 'elysia'
 import { TaskController } from '../controllers/task.controller'
-import { 
-  CreateTaskSchema, 
-  UpdateTaskSchema, 
+import {
+  CreateTaskSchema,
+  UpdateTaskSchema,
   TaskFilterSchema
 } from '../utils/schemas'
 
@@ -16,8 +16,9 @@ export const taskRoutes = new Elysia({ prefix: '/tasks' })
   })
   .get('/:id', TaskController.getTaskById, {
     params: t.Object({
-        id: t.String({ 
+        id: t.String({
             default: '59ce27f5-d4f6-434b-82dc-fa4bc0c08686',
+            format: 'uuid',
             description: 'The ID of the task'
         })
     }),
@@ -53,8 +54,10 @@ export const taskRoutes = new Elysia({ prefix: '/tasks' })
   })
   .patch('/:id', TaskController.updateTask, {
     params: t.Object({
-        id: t.String({ 
-            default: '59ce27f5-d4f6-434b-82dc-fa4bc0c08686'
+        id: t.String({
+            default: '59ce27f5-d4f6-434b-82dc-fa4bc0c08686',
+            format: 'uuid',
+            description: 'The ID of the task'
         })
     }),
     body: UpdateTaskSchema,
@@ -65,8 +68,10 @@ export const taskRoutes = new Elysia({ prefix: '/tasks' })
   })
   .delete('/:id', TaskController.deleteTask, {
     params: t.Object({
-        id: t.String({ 
-            default: '59ce27f5-d4f6-434b-82dc-fa4bc0c08686'
+        id: t.String({
+            default: '59ce27f5-d4f6-434b-82dc-fa4bc0c08686',
+            format: 'uuid',
+            description: 'The ID of the task'
         })
     }),
     detail: {
